@@ -12,7 +12,7 @@ import { buttonStyle } from '../+styles/button.style'
 import { dialogStyle } from '../+styles/dialog.style'
 import { menuStyle } from '../+styles/menu.style'
 import { ToolbarFacade } from './+facade'
-import '../shared/elements/CardDialog'
+import '../shared/CardDialog'
 
 @customElement('help-menu')
 export class HelpMenu extends LitElement {

@@ -4,7 +4,7 @@ import { when } from 'lit/directives/when.js'
 import '@shoelace-style/shoelace/dist/components/button/button.js'
 import '@shoelace-style/shoelace/dist/components/dialog/dialog.js'
 import '@shoelace-style/shoelace/dist/components/icon/icon.js'
-import { dialogStyle } from '../../+styles/dialog.style'
+import { dialogStyle } from '../+styles/dialog.style'
 
 @customElement('card-dialog')
 export class CardDialog extends LitElement {

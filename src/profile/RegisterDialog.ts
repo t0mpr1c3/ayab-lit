@@ -6,8 +6,8 @@ import '@shoelace-style/shoelace/dist/components/input/input.js'
 import { buttonStyle } from '../+styles/button.style'
 import { dialogStyle } from '../+styles/dialog.style'
 import { inputStyle } from '../+styles/input.style'
-import '../shared/elements/CardDialog'
 import { ProfileFacade } from './+facade'
+import '../shared/CardDialog'
 
 @customElement('register-dialog')
 export class RegisterDialog extends LitElement {

@@ -9,6 +9,7 @@ import { dialogStyle } from '../+styles/dialog.style'
 import { inputStyle } from '../+styles/input.style'
 import * as fromRoot from '../+redux'
 import { Scale } from './models/Scale.model'
+import '../shared/CardDialog'
 
 @customElement('scale-dialog')
 export class ScaleDialog extends LitElement {

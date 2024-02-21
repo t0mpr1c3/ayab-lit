@@ -1,6 +1,5 @@
-import { LitElement, html, nothing } from 'lit'
+import { LitElement, html } from 'lit'
 import { customElement, property, queryAsync } from 'lit/decorators.js'
-import { when } from 'lit/directives/when.js'
 import '@shoelace-style/shoelace/dist/components/button/button.js'
 import '@shoelace-style/shoelace/dist/components/checkbox/checkbox.js'
 import SlCheckbox from '@shoelace-style/shoelace/dist/components/checkbox/checkbox.js'
@@ -12,6 +11,7 @@ import { dialogStyle } from '../+styles/dialog.style'
 import { ToolbarFacade } from '../toolbar/+facade'
 import { ImageFacade } from './+facade'
 import { MirrorsHelper } from './helpers/mirrors.helper'
+import '../shared/CardDialog'
 
 @customElement('mirror-dialog')
 export class MirrorDialog extends LitElement {
@@ -49,7 +49,7 @@ export class MirrorDialog extends LitElement {
 
   // Button click actions
 
-  private _onCancelButtonClick(event: Event): void {
+  private _onCancelButtonClick(): void {
     ToolbarFacade.closeImageReflectDialog()
   }
 

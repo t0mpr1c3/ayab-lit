@@ -1,5 +1,5 @@
 import { LitElement, html } from 'lit'
-import { customElement, property, queryAsync, state } from 'lit/decorators.js'
+import { customElement, property, queryAsync } from 'lit/decorators.js'
 import { ifDefined } from 'lit/directives/if-defined.js'
 import { Subscription } from 'rxjs'
 import '@shoelace-style/shoelace/dist/components/button/button.js'
@@ -38,12 +38,11 @@ export class MyAyabMenu extends LitElement {
   protected _settingsDialog: Promise<SettingsDialog>
 
   private _anchorEl: HTMLElement | null = null
+  private _open = Boolean(this._anchorEl)
   private _usernameSubscription: Subscription
   private _loginSubscription: Subscription
   private _registerSubscription: Subscription
   private _settingsSubscription: Subscription
-
-  //@state() protected _open = Boolean(this._anchorEl)
 
   // Subscribe to changes in state
 

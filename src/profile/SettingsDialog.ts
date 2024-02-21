@@ -1,6 +1,7 @@
 import { LitElement, html } from 'lit'
 import { customElement, property, queryAsync } from 'lit/decorators.js'
 import { when } from 'lit/directives/when.js'
+import { Subscription } from 'rxjs'
 import '@shoelace-style/shoelace/dist/components/button/button.js'
 import '@shoelace-style/shoelace/dist/components/checkbox/checkbox.js'
 import '@shoelace-style/shoelace/dist/components/dialog/dialog.js'
@@ -15,9 +16,8 @@ import { defaultSettings, settings } from '../shared/models/Settings.model'
 import { SettingsHelper } from '../shared/helpers/settings.helper'
 import { User } from '../shared/models/User.model'
 import { ProfileFacade } from './+facade'
-import '../shared/elements/CardDialog'
-import '../shared/elements/SelectInput'
-import { Subscription } from 'rxjs'
+import '../shared/CardDialog'
+import '../shared/SelectInput'
 
 @customElement('settings-dialog')
 export class SettingsDialog extends LitElement {
@@ -54,27 +54,11 @@ export class SettingsDialog extends LitElement {
     this._subscription = ProfileFacade.user$.subscribe((user) => {
       this._userChange(user)
     })
-    this._attachEvents()
   }
 
   override disconnectedCallback() {
     super.disconnectedCallback()
     this._subscription.unsubscribe()
-  }
-
-  // Add event listener to form
-
-  private _attachEvents(): void {
-    this.form.then((form) => {
-      Promise.all([
-        customElements.whenDefined('select-input'),
-        customElements.whenDefined('sl-button'),
-        customElements.whenDefined('sl-checkbox'),
-        customElements.whenDefined('sl-select'),
-      ]).then(() =>
-        form.addEventListener('submit', (event) => this._onSubmit(event))
-      )
-    })
   }
 
   // Respond to changes in state

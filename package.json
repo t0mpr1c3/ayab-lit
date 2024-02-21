@@ -1,0 +1,39 @@
+{
+  "name": "ayab-lit",
+  "version": "0.0.0",
+  "description": "AYAB web app in lean but yak-shavey webcomponent style",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "Tom Price",
+  "license": "GPL3.0",
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.1.0",
+    "@shoelace-style/shoelace": "^2.13.1",
+    "lit": "^3.1.2",
+    "redux-observable": "^3.0.0-rc.2",
+    "redux-persist": "^6.0.0",
+    "rxjs": "^7.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.16",
+    "eslint": "^8.52.0",
+    "prettier": "^3.1.0",
+    "prettier-eslint": "^16.1.2",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.12"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": false,
+    "singleAttributePerLine": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5"
+  }
+}

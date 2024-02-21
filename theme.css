@@ -1,0 +1,127 @@
+/**
+ * Custom CSS properties
+ */
+
+:root,
+.sl-theme-light {
+  /* custom font and colors */
+  --color-primary: #673ab7; /* hsl(262, 52%, 47%) */
+  --color-primary-dark: #6338b0; /* hsl(262, 52%, 45%) */
+  --color-primary-darker: #5f35a8; /* hsl(262, 52%, 43%) */
+  --color-primary-light: #6c3cbe; /* hsl(262, 52%, 49%) */
+  --color-primary-lighter: #7141c3; /* hsl(262, 52%, 51%) */
+  --color-primary-overlay: rgba(103, 58, 183, 0.08);
+  --color-secondary: #ffd740; /* hsl(47, 100%, 63%) */
+  --color-secondary-fade: #fae599; /* hsl(47, 91%, 79%) */
+  --color-secondary-dark: #f5ce3d; /* hsl(47, 90%, 60%) */
+  --color-secondary-darker: #ebc63b; /* hsl(47, 81%, 58%) */
+  --color-secondary-darkest: #e0bd38; /* hsl(48, 73%, 55%) */
+  --color-orange: #ffa500; /* hsl(39, 100%, 50%) */
+  --color-orange-dark: #f59e00; /* hsl(39, 100%, 48%) */
+  --color-orange-darker: #eb9800; /* hsl(39, 100%, 46%) */
+  --color-green: #008000; /* hsl(120, 100%, 25%) */
+  --color-green-dark: #007600; /* hsl(120, 100%, 23%) */
+  --color-green-darker: #006b00; /* hsl(120, 100%, 21%) */
+  --color-text-primary: cmyk(0, 0, 0, 0.87);
+  --color-text-secondary: cmyk(0, 0, 0, 0.6);
+  --color-text-disabled: cmyk(0, 0, 0, 0.25);
+  --color-text-contrast: #fff;
+  --color-background: #fff;
+  --color-background-paper: #f5f5f5; /* --sl-color-gray-100 */
+  --color-background-paper-light: #fafafa; /* --sl-color-gray-50 */
+  --color-background-border: #ddd; /* --sl-color-gray-300 */
+  --color-background-border-dark: #aaa; /* --sl-color-gray-400 */
+  --color-overlay: rgba(0, 0, 0, 0.1);
+  --color-overlay-light: rgba(0, 0, 0, 0.07);
+  --color-overlay-lighter: rgba(0, 0, 0, 0.04);
+  --color-overlay-dark: rgba(0, 0, 0, 0.15);
+  --color-overlay-darker: rgba(0, 0, 0, 0.2);
+
+  /* partial override of Shoelace light theme */
+  --sl-color-primary-300: var(--color-primary-lighter);
+  --sl-color-primary-400: var(--color-primary-light);
+  --sl-color-primary-500: var(--color-primary);
+  --sl-color-primary-600: var(--color-primary-dark);
+  --sl-color-primary-700: var(--color-primary-darker);
+  --sl-focus-ring-color: var(--color-primary);
+  --sl-focus-ring-offset: 0;
+  --sl-focus-ring-width: 1.5px;
+  --sl-font-sans: 'Familjen Grotesk';
+  --sl-input-background-color: var(--color-background);
+  --sl-input-background-color-disabled: var(--color-background);
+  --sl-input-background-color-focus: var(--color-background);
+  --sl-input-background-color-hover: var(--color-background);
+  --sl-input-border-width: 1px;
+  --sl-input-border-color: var(--color-text-secondary);
+  --sl-input-border-color-disabled: var(--color-text-disabled);
+  --sl-input-border-color-hover: var(--color-text-primary);
+  --sl-input-border-color-focus: var(--color-primary);
+  --sl-input-color: var(--color-text-primary);
+  --sl-input-color-disabled: var(--color-text-secondary);
+  --sl-input-color-focus: var(--color-text-primary);
+  --sl-input-color-hover: var(--color-text-primary);
+  --sl-input-height-medium: 2.25rem;
+  --sl-input-height-small: 1.75rem;
+  --sl-input-icon-color: var(--color-text-primary);
+  --sl-input-icon-color-focus: var(--color-text-primary);
+  --sl-input-icon-color-hover: var(--color-text-primary);
+  --sl-input-focus-ring-color: var(--color-primary);
+  --sl-input-font-family: var(--sl-font-sans);
+  --sl-input-label-color: var(--color-text-secondary);
+  --sl-input-placeholder-color-disabled: var(--color-text-disabled);
+
+  /* Additional styling for Showlace components */
+  --box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  --box-shadow-hover: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  --sl-button-base-box-shadow: var(--box-shadow);
+  --sl-button-base-box-shadow-hover: var(--box-shadow-hover);
+  --sl-button-base-box-shadow-active: none;
+  --sl-button-menu-base-color: var(--sl-input-color);
+  --sl-button-menu-base-letter-spacing: 0.03rem;
+  --sl-button-menu-base-box-shadow: none;
+  --sl-button-menu-base-hover-background: var(--color-overlay-light);
+  --sl-button-menu-base-hover-border-color: var(--color-overlay-lighter);
+  --sl-button-menu-base-hover-box-shadow: var(--box-shadow);
+  --sl-button-menu-base-active-background: var(--color-overlay);
+  --sl-button-menu-base-active-border-color: var(--color-overlay-lighter);
+  --sl-button-menu-base-active-box-shadow: none;
+  --sl-button-solid-base-background: var(--color-secondary);
+  --sl-button-solid-base-background-active: var(--color-secondary-darker);
+  --sl-button-solid-base-background-disabled: var(--color-secondary-fade);
+  --sl-button-solid-base-background-hover: var(--color-secondary-dark);
+  --sl-button-solid-base-color: var(--sl-input-color);
+  --sl-button-solid-base-color-disabled: var(--color-text-disabled);
+  --sl-button-solid-base-letter-spacing: 0.03rem;
+  --sl-checkbox-border-color: var(--color-background-border-dark);
+  --sl-checkbox-border-width: 0.1rem;
+  --sl-checkbox-box-shadow: 0 0 0 var(--sl-checkbox-border-width)
+    var(--sl-checkbox-border-color);
+  --sl-checkbox-box-shadow-hover: var(--box-shadow-hover),
+    var(--sl-checkbox-box-shadow);
+  --sl-menu-item-label-color: var(--color-text-primary);
+  --sl-menu-item-label-font-size: 0.875rem;
+  --sl-menu-item-base-background-active: #e4e4e4;
+  --sl-menu-item-base-background-hover: #eeeeee;
+  --sl-menu-item-checked-icon-width: 0.75rem;
+  --sl-menu-item-suffix-width: 0;
+  --sl-menu-item-submenu-icon: 0.75rem;
+  --sl-menu-padding: 0;
+
+  --font-banner: Rancho;
+  --options-width: 9.5rem;
+  --card-width: 17rem;
+
+  /* Global styles */
+
+  :root {
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  * {
+    box-sizing: border-box;
+  }
+}
